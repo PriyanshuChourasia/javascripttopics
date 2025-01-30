@@ -104,13 +104,12 @@ class LinkedList{
         }
     }
 
-    removeAt(data){
+    removeElement(data){
         let curr = this.head;
         let prev;
 
         while(curr.next !== null){
             if(curr.data == data){
-                console.log(curr,"found");
                 break;
             }
             prev = curr;
@@ -121,7 +120,13 @@ class LinkedList{
     }
 
     isEmpty(){
-        console.log(this.size);
+        if(this.size === 0)
+        {
+            console.log(true);
+        }
+        else{
+            console.log(false);
+        }
     }
 
 
@@ -147,6 +152,24 @@ class LinkedList{
         }
     }
 
+    indexof(data){
+        let count = 0;
+        let curr = this.head;
+
+        while(curr.next !== null)
+        {
+        
+            if(data === curr.data)
+            {
+                break;
+            }
+            count++;
+            curr = curr.next;
+        }
+
+        console.log("Element found: ",curr.data," at index of",count);
+    }
+
     printList(){
         let curr = this.head;
         let str = "";
@@ -168,5 +191,9 @@ videoPlayer.insertAt(1,90);
 // videoPlayer.removeFrom(2);
 // videoPlayer.replaceAt(0,50);
 videoPlayer.printList();
-videoPlayer.removeAt(40);
+// videoPlayer.removeElement(90);
+// videoPlayer.removeElement(60);
+// videoPlayer.printList();
+// videoPlayer.isEmpty();
+videoPlayer.indexof(40);
 videoPlayer.printList();
