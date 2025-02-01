@@ -14,23 +14,23 @@ body{
 
 
 .mineDiv{
-    width: 362px;
-    height: 362px;
+    width: 452px;
+    height: 452px;
     background-color: aqua;
     display: flex;
 }
 
 .childMineDiv{
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     background-color: brown;
     border: 1px solid black;
     cursor: pointer;
 }
 
 .selectedChild{
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     background-color: rgb(18, 189, 41);
     border: 1px solid black;
     cursor: pointer;

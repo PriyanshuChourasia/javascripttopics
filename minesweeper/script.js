@@ -4,11 +4,12 @@ const mainDiv = document.getElementById("mineSweeper");
 
 function mineBoard(){
 
-    for(let i=0; i<12;i++)
+    for(let i=0; i<9;i++)
     {
         let rowDiv = document.createElement('div');
         rowDiv.setAttribute("i",i);
-        for(let j=0; j<12; j++)
+        rowDiv.className = "";
+        for(let j=0; j<9; j++)
         {
             const childDiv = document.createElement('div');
             childDiv.className='childMineDiv';
